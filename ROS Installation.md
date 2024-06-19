@@ -18,5 +18,5 @@ sudo apt-key add ros.key
 sudo apt-get update --fix-missing
 ```
 
-### 1.2. [[rosdep init failure]]
+### 1.2. [rosdep init failure](rosdep init failure.md)
 

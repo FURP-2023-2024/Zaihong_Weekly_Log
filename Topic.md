@@ -22,4 +22,4 @@ A type of inter-process communication mechanism. It's a named data stream that c
 4. create a msg "struct" `std_msgs::String msg;` and fill in the fields
 5. finally pulish `pub.publish(msg);`
 
-[[Message]]
+[Message](Message.md)
