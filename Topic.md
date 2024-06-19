@@ -4,6 +4,8 @@
 ## 1. Definition
 A type of inter-process communication mechanism. It's a named data stream that can be published by one or more nodes and subscribed to by one or more other nodes.
 
+Topics are managed by roshandler itself and is not owned by a singular publisher or subscriber
+
 ## 2. Concepts
 **Publishing**: A node can publish messages to a topic. These messages are data that the node wants to share with other nodes.
 

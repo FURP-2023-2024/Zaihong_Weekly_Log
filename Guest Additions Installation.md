@@ -5,7 +5,7 @@
 try reinstall additions and check log #todo 
 
 ## 2. Unable to Install
-![Pasted image 20240613172323.png](Pasted image 20240613172323.png.md)
+![Pasted image 20240613172323.png](Pasted%20image%2020240613172323.png.md)
 
 ### 2.1. Chat Fix
 

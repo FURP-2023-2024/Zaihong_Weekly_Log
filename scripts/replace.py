@@ -1,26 +1,31 @@
 import os
 import re
+import urllib.parse
+
+
+def url_encode_spaces(filename):
+    # Encode spaces in the filename for URL usage
+    return urllib.parse.quote(filename)
 
 
 def replace_pattern(directory):
     # Regex pattern to find [[filename]]
     pattern = re.compile(r"\[\[(.*?)\]\]")
 
-    # Only process markdown files in the specified directory
     for filename in os.listdir(directory):
         if filename.endswith(".md"):
-            # Construct the full file path
             file_path = os.path.join(directory, filename)
 
-            # Open and read the file
             try:
                 with open(file_path, "r", encoding="utf-8") as file:
                     content = file.read()
 
-                # Replace the pattern with the markdown link format
-                new_content = pattern.sub(r"[\1](\1.md)", content)
+                def replace(match):
+                    match_group = match.group(1)  # Get the captured group \1
+                    return f"[{match_group}]({url_encode_spaces(match_group)}.md)"
 
-                # If the content has changed, write it back to the file
+                new_content = pattern.sub(replace, content)
+
                 if new_content != content:
                     with open(file_path, "w", encoding="utf-8") as file:
                         file.write(new_content)
