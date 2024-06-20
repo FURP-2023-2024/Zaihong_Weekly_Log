@@ -15,13 +15,11 @@ Topics are managed by roshandler itself and is not owned by a singular publisher
 `rostopic list` shows all topics
 `rostopic echo` shows topic information
 `rostopic hz` shows frequency
+`rqt_graph` shows a graphical relationship between publishers and subscribers
 
 
 ## 4. How to publish a topic
-1. create `NodeHandle` object
-2. create `Publisher` object using `nh.advertize<std_msgs::String>(topic_name, bufr_size)` 
-3. `#include <std_msgs/String.h>` 
-4. create a msg "struct" `std_msgs::String msg;` and fill in the fields
-5. finally pulish `pub.publish(msg);`
+[Publishing a ROS Topic](Publishing%20a%20ROS%20Topic.md)
+[Subscribing to a ROS Topic](Subscribing%20to%20a%20ROS%20Topic.md)
 
 [Message](Message.md)
