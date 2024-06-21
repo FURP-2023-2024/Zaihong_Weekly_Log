@@ -1,5 +1,5 @@
 # Guest Additions Installation
-#issues/unsolved #3-resources/Linux #3-resources/VirtualMachines #3-resources/Linux/Ubuntu #1-projects/FURP
+#issues/solved  #3-resources/Linux #3-resources/VirtualMachines #3-resources/Linux/Ubuntu #1-projects/FURP
 
 ## 1. Just Turns into Black Screen
 try reinstall additions and check log #todo 

@@ -1,11 +1,10 @@
 # Subscribing to a ROS Topic
 #3-resources/ROS #1-projects/FURP 
 
-
-1. set topic name and type of msg
-2. use `NodeHandler` to subscibe to a topic and write a callback function
-3. use `ros::spinOnce()` function to respond to msgs
-
+1. initalize a node
+2. subscribe to a [Topic](Topic.md)
+3. `ros::spin()` to wait for [Message](Message.md)
+4. run the callback function upon data recieval
 
 python example:
 ```python

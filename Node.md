@@ -17,7 +17,7 @@ catkin make
 
 
 [Creating a Node in cpp](Creating%20a%20Node%20in%20cpp.md)
-[Creating a Node in python](Creating%20a%20Node%20in%20python.md)
+[Creating a Node in Python](Creating%20a%20Node%20in%20Python.md)
 
 ## 3. Launching several nodes
 

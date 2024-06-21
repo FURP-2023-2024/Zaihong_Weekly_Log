@@ -19,7 +19,6 @@ Topics are managed by roshandler itself and is not owned by a singular publisher
 
 
 ## 4. How to publish a topic
+[Creating a Custom ROS Message](Creating%20a%20Custom%20ROS%20Message.md)
 [Publishing a ROS Topic](Publishing%20a%20ROS%20Topic.md)
 [Subscribing to a ROS Topic](Subscribing%20to%20a%20ROS%20Topic.md)
-
-[Message](Message.md)

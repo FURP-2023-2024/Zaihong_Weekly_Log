@@ -1,14 +1,10 @@
-# Publishing a ROS Topic
+# Creating a Node in Python
 #3-resources/ROS #1-projects/FURP 
+Do not forget the shebang lines!
+For earlier versions of ubuntu, the default python executable may be `python`, instead of `python 3`
 
-1. create `NodeHandle` object
-2. create `Publisher` object using `nh.advertize<std_msgs::String>(topic_name, bufr_size)` 
-3. `#include <std_msgs/String.h>` 
-4. create a msg "struct" `std_msgs::String msg;` and fill in the fields
-5. finally pulish `pub.publish(msg);`
+[Making Python Node Executable](Making%20Python%20Node%20Executable.md)
 
-
-python example:
 ```python
 #!/usr/bin/env python3
 #coding=utf-8
@@ -28,3 +24,4 @@ if __name__ == "__main__":
 		pub.publish(msg)
 		rate.sleep()
 ```
+really similar to [Creating a Node in cpp](Creating%20a%20Node%20in%20cpp.md)

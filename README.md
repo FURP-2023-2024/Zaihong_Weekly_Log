@@ -22,15 +22,25 @@ Tried docker with [ROS](ROS.md) but failed [Dockerfile for ROS](Dockerfile%20for
 - gpg key error
 
 ## 2. Week 1
-**learnt:**
-- [Moving a Robot](Moving%20a%20Robot.md): how to move a robot in gazebo sim
-- [sensor_msgs](sensor_msgs.md): how to intepret and send sensor data
-- how to create a node
-	- [Creating a Node in python](Creating%20a%20Node%20in%20python.md)
-	- [Creating a Node in cpp](Creating%20a%20Node%20in%20cpp.md)
-- how to create a topic and utilize it 
-	- [Subscribing to a ROS Topic](Subscribing%20to%20a%20ROS%20Topic.md)
-	- [Publishing a ROS Topic](Publishing%20a%20ROS%20Topic.md)
-**reviewing:**
-- [ROS Workspace](ROS%20Workspace.md)
-- [Package](Package.md)
+- **Learnt:**
+	- [Moving a Robot](Moving%20a%20Robot.md): how to move a robot in gazebo sim
+	- [sensor_msgs](sensor_msgs.md): how to intepret and send sensor data
+	- how to create a [Node](Node.md)
+		- [Creating a Node in Python](Creating%20a%20Node%20in%20Python.md)
+		- [Creating a Node in cpp](Creating%20a%20Node%20in%20cpp.md)
+	- how to create a [Topic](Topic.md) and utilize it
+		- [Publishing a ROS Topic](Publishing%20a%20ROS%20Topic.md)
+		- [Subscribing to a ROS Topic](Subscribing%20to%20a%20ROS%20Topic.md)
+	- different [Message](Message.md)
+		- [Creating a Custom ROS Message](Creating%20a%20Custom%20ROS%20Message.md)
+	- [Service](Service.md)
+		- [Creating a Client Node](Creating%20a%20Client%20Node.md)
+		- [Creating a Server Node](Creating%20a%20Server%20Node.md)
+
+- **Reviewing:**
+	- [ROS Workspace](ROS%20Workspace.md)
+	- [Package](Package.md)
+
+- **Errors:**
+	- [Unable to load robot model in rviz](Unable%20to%20load%20robot%20model%20in%20rviz.md) 
+	- [Guest Additions Installation](Guest%20Additions%20Installation.md)

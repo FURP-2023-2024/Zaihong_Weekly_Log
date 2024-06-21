@@ -36,6 +36,6 @@ https://index.ros.org
 ### 4.2. Creating a Package
 
 [Creating a Node in cpp](Creating%20a%20Node%20in%20cpp.md)
-[Creating a Node in python](Creating%20a%20Node%20in%20python.md)
+[Creating a Node in Python](Creating%20a%20Node%20in%20Python.md)
 
 ### 4.3. [Moving a Robot](Moving%20a%20Robot.md)
