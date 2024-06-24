@@ -2,10 +2,19 @@ import os
 import re
 import urllib.parse
 
+# Store the repository name
+REPO_NAME = "FURP-2023-2024/Zaihong_Weekly_Log"
+
 
 def url_encode_spaces(filename):
     # Encode spaces in the filename for URL usage
     return urllib.parse.quote(filename)
+
+
+def create_github_link(filename):
+    # Create an absolute link to the raw file on GitHub
+    base_url = f"https://github.com/{REPO_NAME}"
+    return f"[{filename}]({base_url}/blob/main/Notes/{url_encode_spaces(filename)}.md)"
 
 
 def replace_pattern(directory):
@@ -22,7 +31,7 @@ def replace_pattern(directory):
 
                 def replace(match):
                     match_group = match.group(1)  # Get the captured group \1
-                    return f"[{match_group}]({url_encode_spaces(match_group)}.md)"
+                    return create_github_link(match_group)
 
                 new_content = pattern.sub(replace, content)
 
