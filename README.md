@@ -49,5 +49,13 @@ Tried docker with [ROS](ROS.md) but failed [Dockerfile for ROS](Dockerfile%20for
 	- [Guest Additions Installation](Guest%20Additions%20Installation.md)
 
 ## 3. Week 2
-
 added minimal configuration for [Cmdline Tools](Cmdline%20Tools.md)
+[bashrc config](bashrc%20config.md)
+
+learning [Cartographer](Cartographer.md) [Turtlebot3](Turtlebot3.md)
+
+- Installation Logs:
+	- [Cartographer Installation](Cartographer%20Installation.md)
+	- [Turtlebot3](Turtlebot3.md)
+
+
