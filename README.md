@@ -36,6 +36,9 @@ Tried docker with [ROS](ROS.md) but failed [Dockerfile for ROS](Dockerfile%20for
 	- [Service](Service.md)
 		- [Creating a Client Node](Creating%20a%20Client%20Node.md)
 		- [Creating a Server Node](Creating%20a%20Server%20Node.md)
+	- [Parameter](Parameter.md)
+		- [Parameter Server](Parameter%20Server.md)
+		
 
 - **Reviewing:**
 	- [ROS Workspace](ROS%20Workspace.md)
@@ -44,3 +47,7 @@ Tried docker with [ROS](ROS.md) but failed [Dockerfile for ROS](Dockerfile%20for
 - **Errors:**
 	- [Unable to load robot model in rviz](Unable%20to%20load%20robot%20model%20in%20rviz.md) 
 	- [Guest Additions Installation](Guest%20Additions%20Installation.md)
+
+## 3. Week 2
+
+added minimal configuration for [Cmdline Tools](Cmdline%20Tools.md)
