@@ -35,4 +35,4 @@ def replace_pattern(directory):
 
 
 # Replace 'your_directory_path' with the path to the directory you want to search in
-replace_pattern("/mnt/c/Users/jacky/FURP_LOG/")
+replace_pattern("/mnt/c/Users/jacky/FURP_LOG/Notes/")
