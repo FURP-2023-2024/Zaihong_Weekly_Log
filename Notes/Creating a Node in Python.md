@@ -3,7 +3,7 @@
 Do not forget the shebang lines!
 For earlier versions of ubuntu, the default python executable may be `python`, instead of `python 3`
 
-[Making Python Node Executable](Making%20Python%20Node%20Executable.md)
+[Making Python Node Executable](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Making%20Python%20Node%20Executable.md)
 
 ```python
 #!/usr/bin/env python3
@@ -24,4 +24,4 @@ if __name__ == "__main__":
 		pub.publish(msg)
 		rate.sleep()
 ```
-really similar to [Creating a Node in cpp](Creating%20a%20Node%20in%20cpp.md)
+really similar to [Creating a Node in cpp](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Creating%20a%20Node%20in%20cpp.md)

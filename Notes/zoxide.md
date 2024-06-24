@@ -11,7 +11,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 eval "$(zoxide init bash)"
 ```
 
-to modify options passed to [fzf](fzf.md), use the following env variable
+to modify options passed to [fzf](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/fzf.md), use the following env variable
 ```bash
 export _ZO_FZF_OPTS="--no-sort --exact"
 ```

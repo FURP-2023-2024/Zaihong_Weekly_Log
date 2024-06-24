@@ -6,6 +6,6 @@
 
 can be interpreted as structs in c.
 
-[std_msgs](std_msgs.md)
-[geometry_msgs](geometry_msgs.md)
-[sensor_msgs](sensor_msgs.md)
+[std_msgs](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/std_msgs.md)
+[geometry_msgs](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/geometry_msgs.md)
+[sensor_msgs](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/sensor_msgs.md)

@@ -15,7 +15,7 @@ int64 b
 int64 sum
 ```
 
-[Creating Custom Service Message](Creating%20Custom%20Service%20Message.md)
+[Creating Custom Service Message](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Creating%20Custom%20Service%20Message.md)
 
 server class definition:
 ```cpp

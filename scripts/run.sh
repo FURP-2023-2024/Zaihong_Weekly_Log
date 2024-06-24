@@ -8,7 +8,7 @@ LOGFILE="$BASE_DIR/scripts/script.log"
 
 # Function to log messages with a timestamp
 log_message() {
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOGFILE"
+	echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOGFILE"
 }
 
 # Start logging
@@ -27,4 +27,4 @@ python3 "$BASE_DIR/scripts/replace.py" >>"$LOGFILE" 2>&1 && log_message "replace
 mv "$BASE_DIR/Notes/README.md" "$BASE_DIR" 2>>"$LOGFILE" && log_message "README.md moved successfully." || log_message "Failed to move README.md."
 
 # End logging
-log_message "Script finished."hed."
+log_message "Script finished."

@@ -26,7 +26,7 @@ catkin_package(...message_runtime)
 ```
 
 4. add dependencies when building the node (Python doesn't need this step)
-![Pasted image 20240621204528.png](Pasted%20image%2020240621204528.png.md)
+![Pasted image 20240621204528.png](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Pasted%20image%2020240621204528.png.md)
 ```cmake
 add_executable(person_publisher src/person_publisher.cpp)
 target_link_libraries(person_publisher ${catkin_LIBRARIES})

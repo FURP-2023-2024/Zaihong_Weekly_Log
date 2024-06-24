@@ -18,5 +18,5 @@ sudo apt-key add ros.key
 sudo apt-get update --fix-missing
 ```
 
-### 1.2. [rosdep init failure](rosdep%20init%20failure.md)
+### 1.2. [rosdep init failure](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/rosdep%20init%20failure.md)
 

@@ -11,7 +11,7 @@
 - Organizes multiple function packages that serve the same purpose.
 
 ## 2. Creating a package
-Run the following in the src directory of the [ROS Workspace](ROS%20Workspace.md)
+Run the following in the src directory of the [ROS Workspace](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS%20Workspace.md)
 ```bash
 # common dependencies are rospy roscpp std_msgs ...
 catkin_create_pkg <pkg_name> [dependency1] [dependency2] ...

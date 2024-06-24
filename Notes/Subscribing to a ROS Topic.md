@@ -2,8 +2,8 @@
 #3-resources/ROS #1-projects/FURP 
 
 1. initalize a node
-2. subscribe to a [Topic](Topic.md)
-3. `ros::spin()` to wait for [Message](Message.md)
+2. subscribe to a [Topic](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Topic.md)
+3. `ros::spin()` to wait for [Message](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Message.md)
 4. run the callback function upon data recieval
 
 python example:

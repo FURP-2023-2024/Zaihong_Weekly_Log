@@ -4,7 +4,7 @@
 ## 1. Env Variables
 `devel/` gives access to user created packages
 `devel_isolated/` gives access to cartographer
-`turtlebot_test/devel/` gives access to [Turtlebot3](Turtlebot3.md) package
+`turtlebot_test/devel/` gives access to [Turtlebot3](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Turtlebot3.md) package
 ```bash
 source ~/catkin_ws/devel/setup.bash
 source ~/turtlebot_test/devel/setup.bash

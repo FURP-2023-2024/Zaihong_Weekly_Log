@@ -1,6 +1,6 @@
 # Creating Custom Service Message
 #1-projects/FURP #3-resources/ROS 
-similar to [Creating a Custom ROS Message](Creating%20a%20Custom%20ROS%20Message.md)
+similar to [Creating a Custom ROS Message](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Creating%20a%20Custom%20ROS%20Message.md)
 
 1. create a `.srv` file in the `srv/` folder 
 2. modify package.xml
