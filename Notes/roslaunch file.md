@@ -18,3 +18,18 @@ running the launch file
 - show node on a separate terminal
 `output="screen"`
 - show output to screen (ROS_WARN is not affected by this paramenter)
+
+## 3. Tags
+
+### 3.1. `node`
+**Attributes:**
+`pkg` specifices the package name
+`type` specifies the name of the node within the package
+`name` gives a node a name
+
+### 3.2. `include`
+incorporates the contents of another launch file into the current one
+ex.
+```xml
+<include file="$(find wpr_simulation)/launch/wpb_stage_slam.launch"/>
+```

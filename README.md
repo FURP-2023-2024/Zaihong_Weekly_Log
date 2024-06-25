@@ -52,10 +52,15 @@ Tried docker with [ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blo
 added minimal configuration for [Cmdline Tools](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cmdline%20Tools.md)
 [bashrc config](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/bashrc%20config.md)
 
+- [Message](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Message.md)
+	- [OccupancyGrid](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/OccupancyGrid.md)
+	- [imu](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/imu.md) 
+
+- [SLAM](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/SLAM.md)
+	- [Hector_Mapping](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Hector_Mapping.md)
+
 learning [Cartographer](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer.md) [Turtlebot3](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Turtlebot3.md)
 
 - Installation Logs:
 	- [Cartographer Installation](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer%20Installation.md)
 	- [Turtlebot3](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Turtlebot3.md)
-
-

@@ -13,8 +13,8 @@ def url_encode_spaces(filename):
 
 def create_github_link(filename):
     # Create an absolute link to the raw file on GitHub
-    base_url = f"https://github.com/{REPO_NAME}"
-    return f"[{filename}]({base_url}/blob/main/Notes/{url_encode_spaces(filename)}.md)"
+    base_url = f"https://github.com/{REPO_NAME}/blob/main/Notes/"
+    return f"[{filename}]({base_url}{url_encode_spaces(filename)}.md)"
 
 
 def replace_pattern(directory):

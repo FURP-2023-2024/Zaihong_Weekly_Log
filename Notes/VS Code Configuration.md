@@ -12,7 +12,7 @@ in `.vscode/tasks.json`
 		"type": "catkin_make",
 		"args": [
 			"--directory",
-			"/home/robot/catkin_ws"
+			"$HOME/catkin_ws"
 		],
 		"problemMatcher": [
 			"$catkin-gcc"
