@@ -25,3 +25,13 @@ in `.vscode/tasks.json`
 	}]
 }
 ```
+
+## 2. Python Data Science Setup 
+
+**Extenstions:**
+Python extension pack
+pylance
+path intellisence
+
+**Settings:**
+jupyter sends to interactive window

@@ -9,10 +9,10 @@ a standalone process in a robot system
 ## 2. Steps to creating a node
 1. use `catkin_create_pkg node_name rospy roscpp std_msgs` to create a [Package](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Package.md)
 > rospy if python, roscpp if cpp
-2. then to make roscore have access to the package,
+2. then to make roscore have access to the [Package](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Package.md),
 ```bash
 cd ..
-catkin make
+catkin_make
 ```
 
 

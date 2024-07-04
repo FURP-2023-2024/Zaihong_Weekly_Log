@@ -1,3 +1,6 @@
+---
+Aliases: [ "#3-resources/ROS/Packages" ]
+---
 # Package
 #3-resources/ROS #1-projects/FURP 
 

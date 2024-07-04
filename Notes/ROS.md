@@ -33,7 +33,7 @@ https://index.ros.org
 [rosmsg](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/rosmsg.md)
 [rosbag](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/rosbag.md)
 
-### 4.2. Creating a Package
+### 4.2. Creating a [Package](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Package.md)
 
 [Creating a Node in cpp](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Creating%20a%20Node%20in%20cpp.md)
 [Creating a Node in Python](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Creating%20a%20Node%20in%20Python.md)

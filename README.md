@@ -1,3 +1,6 @@
+---
+number headings: off, first-level 1, max 6, _.1.1.
+---
 # Project Log
 #1-projects/FURP 
 
@@ -7,7 +10,7 @@ Some links may be broken, as these notes are only part of the full obsidian vaul
 
 Files are not stored in seperate folders as that would make transfer of notes more complicated, and using links is more flexible and straight-forward.
 
-## 1. Week 0
+## Week 0
 Basic information about [ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS.md)
 
 Tried docker with [ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS.md) but failed [Dockerfile for ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Dockerfile%20for%20ROS.md)
@@ -21,7 +24,7 @@ Tried docker with [ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blo
 - [rosdep init failure](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/rosdep%20init%20failure.md)
 - gpg key error
 
-## 2. Week 1
+## Week 1
 - **Learnt:**
 	- [Moving a Robot](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Moving%20a%20Robot.md): how to move a robot in gazebo sim
 	- [sensor_msgs](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/sensor_msgs.md): how to intepret and send sensor data
@@ -48,7 +51,7 @@ Tried docker with [ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blo
 	- [Unable to load robot model in rviz](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Unable%20to%20load%20robot%20model%20in%20rviz.md) 
 	- [Guest Additions Installation](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Guest%20Additions%20Installation.md)
 
-## 3. Week 2
+## Week 2
 added minimal configuration for [Cmdline Tools](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cmdline%20Tools.md)
 [bashrc config](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/bashrc%20config.md)
 
@@ -57,10 +60,45 @@ added minimal configuration for [Cmdline Tools](https://github.com/FURP-2023-202
 	- [imu](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/imu.md) 
 
 - [SLAM](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/SLAM.md)
+	- [Transform](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Transform.md)
 	- [Hector_Mapping](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Hector_Mapping.md)
+	- [Gmapping](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Gmapping.md)
 
-learning [Cartographer](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer.md) [Turtlebot3](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Turtlebot3.md)
+- [Navigation in ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Navigation%20in%20ROS.md)
+	- [move_base](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/move_base.md)
+		- [Dynamic Window Approach](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Dynamic%20Window%20Approach.md)
+	- [amcl](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/amcl.md)
+	- [Costmap](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Costmap.md)
+	- [Recovery Behaviors](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Recovery%20Behaviors.md)
+
+- [dwa_local_planner](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/dwa_local_planner.md)
+- [teb_local_planner](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/teb_local_planner.md)
+- [Action](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Action.md)
 
 - Installation Logs:
 	- [Cartographer Installation](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer%20Installation.md)
 	- [Turtlebot3](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Turtlebot3.md)
+
+- Solved issues
+	- [Unable to load robot model in rviz](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Unable%20to%20load%20robot%20model%20in%20rviz.md)
+	- [Cartographer Installation](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer%20Installation.md) see Errors section
+
+## Week 3
+
+size of burger is: 138 x 178 x 192 mm
+
+
+What is [Cartographer](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer.md)?
+[Steps to Using Cartographer](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Steps%20to%20Using%20Cartographer.md)
+
+- parameter tuning
+	- [local_costmap](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/local_costmap.md) 
+	- [global_costmap](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/global_costmap.md)
+	- [move_base](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/move_base.md)
+	- [teb_local_planner](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/teb_local_planner.md)
+	- [teb_local_planner Parameters](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/teb_local_planner%20Parameters.md)
+
+fixed an error where the costmap won't show up when using cartographer:
+[global_costmap](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/global_costmap.md) > Errors
+
+[Cartographer Integration Errors](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer%20Integration%20Errors.md)

@@ -1,6 +1,11 @@
 # tmux
 #1-projects/FURP
 
+## 1. Installation
+
+```bash
+```
+
 minimal `.tmux.conf`
 ```conf
 # set default theme

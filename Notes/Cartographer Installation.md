@@ -35,3 +35,20 @@ cartographer: [libabsl-dev] defined as "not available" for OS version [focal]
 **Solution:**
 
 > comment out the depend libasbsi-dev in `package.xml`
+
+
+### 2.3. Issue: Incompatible Workspace Paths
+
+When compiling projects like Turtlebot and Cartographer in separate ROS (Robot Operating System) workspaces, conflicts may arise due to different versions of the same package within each workspace. The default behavior of the `setup.bash` script is to remove paths from `$ROS_PACKAGE_PATH` that do not have a direct dependency on the already sourced workspaces to resolve such conflicts.
+
+**Solution:**
+To avoid losing the path of one workspace when sourcing another, use the `--extend` option with the `source` command. This allows both workspaces to coexist in the `$ROS_PACKAGE_PATH` without interference.
+
+Example `.bashrc`
+```bash
+source $HOME/catkin_ws/devel/setup.bash
+source $HOME/turtlebot_ws/devel/setup.bash
+source $HOME/cartographer_ws/install_isolated/setup.bash --extend
+```
+
+This approach ensures that both Turtlebot and Cartographer workspaces are accessible, with Cartographer benefiting from its isolated build environment created by `catkin_make_isolated --use-ninja`.

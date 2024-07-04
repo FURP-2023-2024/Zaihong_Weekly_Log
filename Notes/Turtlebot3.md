@@ -1,6 +1,8 @@
 # Turtlebot3
 #1-projects/FURP 
 
+[TurtleBot3 (robotis.com)](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
+
 ## 1. installation
 > from github clone the following packages:
 turtlebot3
