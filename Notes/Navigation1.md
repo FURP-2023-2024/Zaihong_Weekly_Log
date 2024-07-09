@@ -1,4 +1,4 @@
-# Navigation in ROS
+# Navigation1
 #3-resources/ROS #1-projects/FURP 
 
 ![Pasted image 20240625210408.png](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Pasted%20image%2020240625210408.png.md)

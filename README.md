@@ -64,7 +64,7 @@ added minimal configuration for [Cmdline Tools](https://github.com/FURP-2023-202
 	- [Hector_Mapping](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Hector_Mapping.md)
 	- [Gmapping](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Gmapping.md)
 
-- [Navigation in ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Navigation%20in%20ROS.md)
+- [Navigation1](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Navigation1.md)
 	- [move_base](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/move_base.md)
 		- [Dynamic Window Approach](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Dynamic%20Window%20Approach.md)
 	- [amcl](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/amcl.md)
@@ -107,3 +107,10 @@ fixed an error where the costmap won't show up when using cartographer:
 [global_costmap](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/global_costmap.md) > Errors
 
 [Cartographer Integration Errors](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer%20Integration%20Errors.md)
+
+learning about [ROS2](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS2.md)
+
+## Week 4
+[ROS2 Installation](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS2%20Installation.md)
+[ROS2 Packages](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS2%20Packages.md)
+[Navigation2](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Navigation2.md)

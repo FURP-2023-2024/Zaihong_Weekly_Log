@@ -4,6 +4,7 @@
 ## 1. Installation
 
 ```bash
+
 ```
 
 minimal `.tmux.conf`
