@@ -4,7 +4,7 @@
 **System**
 using too many virtual cpu cores may lead to spikes in vmm (makes it laggy)
 - 4 cores is about appropriate
-use hyper-v acceleration
+use KVM acceleration
 
 **Display**
 give it a bunch of video ram and enable 3d acceleration
