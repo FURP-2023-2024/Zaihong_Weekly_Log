@@ -96,7 +96,8 @@ ssh pi@192.168.12.1
   - **Mode 12, 13**: Dance.
 
 ## 4. Integration Method
-![[Pasted image 20240719011452.png]]
+
+
 ### 4.1. gazebo -> scan 
 - comes from lidar scan 
 - can connect lidar directly to external computer and read data from there, reducing overload from internal controllers in go1
@@ -104,6 +105,7 @@ ssh pi@192.168.12.1
 - can be build using urdf file (lidar position be added) #todo 
 
 ---
+![Pasted image 20240719011452](https://github.com/user-attachments/assets/54c36812-c381-473f-b2d2-5ff3f77b4dc3)
 
 The ==gray section== from the image above is to be replaced with robot provided data
 data packets are sent to and from the Go1 with external devices (within LAN) using UDP protocal
