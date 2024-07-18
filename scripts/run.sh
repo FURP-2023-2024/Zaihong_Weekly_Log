@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the base directory variable
-BASE_DIR="/mnt/c/Users/jacky/FURP_LOG"
+BASE_DIR="/mnt/c/Users/jacky/FURP_LOG/"
 
 # Define log file path using the base directory variable
 LOGFILE="$BASE_DIR/scripts/script.log"
@@ -15,7 +15,7 @@ log_message() {
 log_message "Script started."
 
 # Safely delete markdown files within the base directory and log the output
-find "$BASE_DIR" -type f -name '*.md' -exec rm {} \; 2>>"$LOGFILE" && log_message "Markdown files deleted." || log_message "Failed to delete markdown files."
+find "$BASE_DIR/Notes" -type f -name '*.md' -exec rm {} \; 2>>"$LOGFILE" && log_message "Markdown files deleted." || log_message "Failed to delete markdown files."
 
 # Source the filter script located in the scripts directory within the base directory and log its output
 . "$BASE_DIR/scripts/filter.sh" >>"$LOGFILE" 2>&1 && log_message "filter.sh sourced successfully." || log_message "Failed to source filter.sh."
