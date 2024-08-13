@@ -1,142 +1,27 @@
 ---
 number headings: off, first-level 1, max 6, _.1.1.
 ---
-# Project Log
-#1-projects/FURP 
 
-Issues faced and configuration options will be uploaded to this repository as reference.
+Project logs are included in the Weekly_Log folder, the following is an executive summary of what has been installed on the provided aim-N305 and how to use the Go1 for future projects
 
-Some links may be broken, as these notes are only part of the full obsidian vault.
+## On-board Camera Integration Challenges
 
-Files are not stored in seperate folders as that would make transfer of notes more complicated, and using links is more flexible and straight-forward.
+The Unitree camera SDK has exhibited compatibility issues with the nano boards on the Go1 robot, specifically preventing the transmission of camera feeds over UDP, except for the device at `unitree@192.168.123.15`. As a prospective solution, it is recommended to perform a complete software reflash, aligning with advice from Unitree's support team. Historical code modifications on devices with IP addresses ending in 12, 13, and 14 suggest prior attempts to address these issues.
 
-## Week 0
-Basic information about [ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS.md)
+For effective communication between a computer and the Go1 robot, the computer must be assigned a static IP within the `192.168.123.x` range. While documentation does not explicitly reserve specific IPs, those above 20 are less likely to conflict. Adjustments in the `trans_rect_config.yaml` file are necessary to direct the camera feed to the correct device, particularly when performing SLAM on a separate machine with an IP ending in 200.
 
-Tried docker with [ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS.md) but failed [Dockerfile for ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Dockerfile%20for%20ROS.md)
+If hardware decoding is unsupported, such as with `omxh264dec`, parameters within the GStreamer pipeline may need to be altered to utilize `avdec_h264`. This adjustment can be made within the `std::string udpBehindData` in the `example_getImageTrans.cc` from Unitree's GitHub repository. Should these measures fail, deleting the current OpenCV installation and compiling version 4.1.1 might be required. Direct camera stream observation can be facilitated by using the `-X` option during SSH connections to the Go1's nano board.
 
-- virtual box installation log 
-	- [Shared Folders in VirtualBox Ubuntu](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Shared%20Folders%20in%20VirtualBox%20Ubuntu.md)
-	- [Terminal Not Opening in Virtualbox Ubuntu](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Terminal%20Not%20Opening%20in%20Virtualbox%20Ubuntu.md)
-	- [Guest Additions Installation](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Guest%20Additions%20Installation.md)
+## Realsense D455 Utilization
 
-[ROS](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS.md) installation errors:
-- [rosdep init failure](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/rosdep%20init%20failure.md)
-- gpg key error
+To harness the capabilities of the Realsense D455, the `realsense2_camera` package must be cloned and built. When launching with `rs_camera.launch`, parameters `enable_accel:=true`, `enable_gyro:=true`, and `unite_imu_method:=linear_interpolation` should be included to utilize IMU data. The Realsense camera can be tested in mono and mono inertial modes of ORB-SLAM with the `image_publisher` package on the AIM-N305. This setup necessitates dependencies such as `ORB_SLAM3` and `orb_slam_ros`.
 
-## Week 1
-- **Learnt:**
-	- [Moving a Robot](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Moving%20a%20Robot.md): how to move a robot in gazebo sim
-	- [sensor_msgs](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/sensor_msgs.md): how to intepret and send sensor data
-	- how to create a [Node](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Node.md)
-		- [Creating a Node in Python](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Creating%20a%20Node%20in%20Python.md)
-		- [Creating a Node in cpp](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Creating%20a%20Node%20in%20cpp.md)
-	- how to create a [Topic](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Topic.md) and utilize it
-		- [Publishing a ROS Topic](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Publishing%20a%20ROS%20Topic.md)
-		- [Subscribing to a ROS Topic](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Subscribing%20to%20a%20ROS%20Topic.md)
-	- different [Message](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Message.md)
-		- [Creating a Custom ROS Message](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Creating%20a%20Custom%20ROS%20Message.md)
-	- [Service](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Service.md)
-		- [Creating a Client Node](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Creating%20a%20Client%20Node.md)
-		- [Creating a Server Node](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Creating%20a%20Server%20Node.md)
-	- [Parameter](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Parameter.md)
-		- [Parameter Server](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Parameter%20Server.md)
-		
+The `camera_base_link`, representing the camera's base, is mapped to `/camera` by default, as the `orb_slam_node` typically publishes transformations from `/world` to `/camera`. Adjustments can be made to better approximate the `/odom` of the robot.
 
-- **Reviewing:**
-	- [ROS Workspace](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS%20Workspace.md)
-	- [Package](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Package.md)
+## Usage Tips
 
-- **Errors:**
-	- [Unable to load robot model in rviz](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Unable%20to%20load%20robot%20model%20in%20rviz.md) 
-	- [Guest Additions Installation](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Guest%20Additions%20Installation.md)
+To send high-level movement commands to the Go1 robot using ROS messages, the package `go1-math-motion` could be helpful. Instead of setting XY velocity and sending UDP packets, `go1-math-motion` converts `/cmd_vel` messages and creates and sends the commands as udp packets, which is helpful as `/cmd_vel` is the output of `move_base`. Credits to [GitHub - dbaldwin/go1-math-motion: Go1 high level control with ROS](https://github.com/dbaldwin/go1-math-motion).
 
-## Week 2
-added minimal configuration for [Cmdline Tools](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cmdline%20Tools.md)
-[bashrc config](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/bashrc%20config.md)
+IMU data received from the dog and the camera can be fused using a Kalman filter. Credits to [Fusing GPS, IMU and odom data - ROS Answers: Open Source Q&A Forum](https://answers.ros.org/question/304502/fusing-gps-imu-and-odom-data/).
 
-- [Message](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Message.md)
-	- [OccupancyGrid](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/OccupancyGrid.md)
-	- [imu](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/imu.md) 
-
-- [SLAM](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/SLAM.md)
-	- [Transform](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Transform.md)
-	- [Hector_Mapping](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Hector_Mapping.md)
-	- [Gmapping](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Gmapping.md)
-
-- [Navigation1](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Navigation1.md)
-	- [move_base](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/move_base.md)
-		- [Dynamic Window Approach](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Dynamic%20Window%20Approach.md)
-	- [amcl](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/amcl.md)
-	- [Costmap](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Costmap.md)
-	- [Recovery Behaviors](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Recovery%20Behaviors.md)
-
-- [dwa_local_planner](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/dwa_local_planner.md)
-- [teb_local_planner](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/teb_local_planner.md)
-- [Action](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Action.md)
-
-- Installation Logs:
-	- [Cartographer Installation](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer%20Installation.md)
-	- [Turtlebot3](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Turtlebot3.md)
-
-- Solved issues
-	- [Unable to load robot model in rviz](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Unable%20to%20load%20robot%20model%20in%20rviz.md)
-	- [Cartographer Installation](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer%20Installation.md) see Errors section
-
-## Week 3
-
-size of burger is: 138 x 178 x 192 mm
-
-
-What is [Cartographer](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer.md)
-[Steps to Using Cartographer](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Steps%20to%20Using%20Cartographer.md)
-
-- [parameter tuning](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/parameter%20tuning.md)
-	- [local_costmap](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/local_costmap.md) 
-	- [global_costmap](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/global_costmap.md)
-	- [move_base](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/move_base.md)
-	- [teb_local_planner](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/teb_local_planner.md)
-	- [teb_local_planner Parameters](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/teb_local_planner%20Parameters.md)
-
-- Exploring alternative to A\* for global planner
-	- [Jump Point Search](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Jump%20Point%20Search.md)
-
-[Autonomous Exploration](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Autonomous%20Exploration.md)
-
-fixed an error where the costmap won't show up when using cartographer:
-[global_costmap](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/global_costmap.md) > Errors
-
-[Cartographer Integration Errors](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Cartographer%20Integration%20Errors.md)
-
-learning about [ROS2](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS2.md)
-
-## Week 4
-[ROS2 Installation](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS2%20Installation.md)
-
-- basics of making a 
-	- [ROS2 Packages](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS2%20Packages.md)
-	- [ROS2 Publisher](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS2%20Publisher.md)
-	- [ROS2 Subscriber](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/ROS2%20Subscriber.md)
-
-[Navigation2](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Navigation2.md)
-saving a map after [SLAM](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/SLAM.md)
-
-- unitree ros documents:
-	- [宇树科技—全球四足机器人行业开创者 (unitree.com)](https://www.unitree.com/cn/ "宇树科技—全球四足机器人行业开创者 (unitree.com)")
-	- [宇树科技 文档中心 (unitree.com)](https://support.unitree.com/main/zh "宇树科技 文档中心 (unitree.com)")
-	- [Go1系列使用教学_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1vm4y1U71H?share_source=copy_web "Go1系列使用教学_哔哩哔哩_bilibili")
-	- [宇树SDK使用教学_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1qm4y1U76g?share_source=copy_web "宇树SDK使用教学_哔哩哔哩_bilibili")
-
-unitree ros2 package
-```bash
-sudo apt install ros-humble-rmw-cyclonedds-cpp ros-humble-rosidl-generator-dds-idl
-```
-
-
-## Week 5
-Implementation on actual robot
-
-[Could not find GTSAM](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Could%20not%20find%20GTSAM.md)
-
-[Installing Packages for Go1](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Installing%20Packages%20for%20Go1.md)
-[Go1 Basic Usage](https://github.com/FURP-2023-2024/Zaihong_Weekly_Log/blob/main/Notes/Go1%20Basic%20Usage.md)
+Converting `/imu` and `/odom` data from the Go1 to ROS topics could also be simplified with reference to: [GitHub - aatb-ch/go1_republisher: Publish camera/imu/odometry as ROS topics on the Unitree Go1 dogs.](https://github.com/aatb-ch/go1_republisher).
